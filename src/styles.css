@@ -66,7 +66,7 @@
   --color-info: var(--info);
   --color-info-foreground: var(--info-foreground);
   --color-surface: var(--surface);
-  --font-display: var(--font-display);
+  --font-display: var(--font-heading);
   --font-sans: var(--font-sans-body);
   --shadow-card: var(--shadow-card);
 }
@@ -96,7 +96,7 @@
   --surface: oklch(1 0 0);
   --sidebar-width-shell: 16rem;
   --shadow-card: 0 1px 2px 0 oklch(0.22 0.02 250 / 6%), 0 1px 3px 0 oklch(0.22 0.02 250 / 4%);
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-sans-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
@@ -166,7 +166,7 @@
   }
 
   h1, h2, h3, h4 {
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     letter-spacing: -0.015em;
   }
 }
