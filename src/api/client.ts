@@ -20,7 +20,7 @@ export const USE_MOCK_API = API_BASE_URL.trim() === "";
 
 export class ApiError extends Error {
   status: number;
-  fieldErrors?: Record<string, string>;
+  fieldErrors?: Record<string, string> | undefined;
 
   constructor(message: string, status: number, fieldErrors?: Record<string, string>) {
     super(message);
@@ -104,7 +104,7 @@ export async function apiRequest<T>(path: string, options: RequestOptions = {}):
 
   let response: Response;
   try {
-    response = await fetch(`${API_BASE_URL}${path}`, { method, headers, body: payload });
+    response = await fetch(`${API_BASE_URL}${path}`, { method, headers, body: payload ?? null });
   } catch {
     throw new ApiError("Unable to reach the server. Check your connection and try again.", 0);
   }
